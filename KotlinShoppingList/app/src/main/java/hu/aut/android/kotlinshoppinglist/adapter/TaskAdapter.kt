@@ -10,14 +10,14 @@ import android.widget.CheckBox
 import android.widget.TextView
 import hu.aut.android.kotlinshoppinglist.MainActivity
 import hu.aut.android.kotlinshoppinglist.R
-import hu.aut.android.kotlinshoppinglist.adapter.ShoppingAdapter.ViewHolder
+import hu.aut.android.kotlinshoppinglist.adapter.TaskAdapter.ViewHolder
 import hu.aut.android.kotlinshoppinglist.data.AppDatabase
 import hu.aut.android.kotlinshoppinglist.data.Task
 import hu.aut.android.kotlinshoppinglist.touch.ShoppingTouchHelperAdapter
 import kotlinx.android.synthetic.main.row_item.view.*
 import java.util.*
 
-class ShoppingAdapter : RecyclerView.Adapter<ViewHolder>, ShoppingTouchHelperAdapter {
+class TaskAdapter : RecyclerView.Adapter<ViewHolder>, ShoppingTouchHelperAdapter {
     /* ShoppingItem elemek listája*/
     private val items = mutableListOf<Task>()
     private val context: Context

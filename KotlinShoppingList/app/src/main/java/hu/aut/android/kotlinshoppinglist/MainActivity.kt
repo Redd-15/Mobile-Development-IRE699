@@ -2,7 +2,7 @@ package hu.aut.android.kotlinshoppinglist
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import hu.aut.android.kotlinshoppinglist.adapter.ShoppingAdapter
+import hu.aut.android.kotlinshoppinglist.adapter.TaskAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import android.preference.PreferenceManager
 import android.support.v7.widget.helper.ItemTouchHelper
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), TaskDialog.TaskHandler {
         val KEY_ITEM_TO_EDIT = "KEY_ITEM_TO_EDIT"
     }
 
-    private lateinit var adapter: ShoppingAdapter
+    private lateinit var adapter: TaskAdapter
     /*
     Alkalmazás create-kor hívódik meg
      */
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), TaskDialog.TaskHandler {
             val items = AppDatabase.getInstance(this).TaskItemDao().findAllItems()
 
             runOnUiThread{
-                adapter = ShoppingAdapter(this, items)
+                adapter = TaskAdapter(this, items)
                 recyclerShopping.adapter = adapter
 
                 val callback = ShoppingTouchHelperCallback(adapter)
