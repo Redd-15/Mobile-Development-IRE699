@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Új elem létrehozásánál, vagy meglévő módosításánál
+  2 db EditText a ShoppingItem adattagjainak.
+   Ide is szükséges a bővítés új adattag esetén-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task name" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task description" />
+
+    <EditText
+        android:id="@+id/etAssigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task assigned to" />
+
+    <EditText
+        android:id="@+id/etDay_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Day left for task"
+        android:inputType="numberDecimal" />
+
+</LinearLayout>
